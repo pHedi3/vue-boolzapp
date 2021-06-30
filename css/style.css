@@ -1,5 +1,24 @@
 /* utility  class  */
+.contacts img, .user-part img {
+    width: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
 
+.contacts span, .user-part span {
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.icon {
+    display: inline-block;
+}
+.flex.space-between{
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
@@ -8,6 +27,7 @@
 body {
     height: 100vh;
     background-image: linear-gradient(to bottom, #419388 15%, #dddbd2 15% , #d4dbdc);
+    font-family: 'Roboto', sans-serif;
 }
 
 .main-app {
@@ -17,18 +37,26 @@ body {
     background-color: #fafafa;
 }
 
+/* aside-part  */
+
+/* .user-part */
+.user-part {
+    background-color: #eaeaea;
+}
+
+.user-part .icon {
+    line-height: 50px;
+    font-size: 18px;
+    color: #b1b1b1;
+}
+
+.user-part .icon:last-of-type {
+    margin-right: 12px;
+}
+
+/* notification part  */
 
 
 
 
 /* contacts part  */
-.contacts img {
-    width: 50px;
-    border-radius: 50%;
-    vertical-align: middle;
-}
-.contacts span {
-    vertical-align: middle;
-    line-height: 50px;
-    font-size: 20px;
-}
