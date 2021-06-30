@@ -28,6 +28,13 @@
     height: 100%;
 }
 
+.time {
+    text-align: right;
+    margin-top: 4px;
+    font-size: 10px;
+    color: #b7b9bb;
+}
+
 /* end utility class  */
 body {
     background-image: linear-gradient(to bottom, #419388 15%, #dddbd2 15% , #d4dbdc);
@@ -159,6 +166,23 @@ body {
     height: calc(100% - 116px);
     background: url(../img/mine.jpg);
 }
+.message-part .utent-message {
+    padding: 12px;
+    background-color: #dcf8c0;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.message-part .account-message {
+    padding: 12px;
+    background-color: #ffffff;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-bottom: 8px;
+}
+
+
 
 
 /* input part  */
