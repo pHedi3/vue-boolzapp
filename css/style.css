@@ -14,6 +14,7 @@
 
 .icon {
     display: inline-block;
+    cursor: pointer;
 }
 .flex.space-between{
     display: flex;
@@ -109,7 +110,8 @@ body {
 }
 
 .serch input {
-    width: calc(100% - 12px);
+    /* 12 perchè non mi renda rettangolare la forma */
+    width: calc(100% - 12px); 
     border: none
 }
 
@@ -120,8 +122,6 @@ body {
 .serch input:active {
     border: none;
 }
-
-
 
 
 /* contacts part  */
@@ -192,4 +192,13 @@ body {
 }
 .input-part input {
     width: 100%;
+}
+
+.input-part input::placeholder {
+    color: #757575;
+    font-size: 12px;
+}
+
+.input-part i {
+    color: #6c7376;
 }
