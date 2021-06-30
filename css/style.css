@@ -1,11 +1,11 @@
 /* utility  class  */
-.contacts img, .user-part img {
+.contacts img, .user-part img, .account-part img {
     width: 50px;
     border-radius: 50%;
     vertical-align: middle;
 }
 
-.contacts span, .user-part span {
+.contacts span, .user-part span, .account-part span {
     vertical-align: middle;
     line-height: 50px;
     font-size: 18px;
@@ -129,4 +129,43 @@ body {
 
 .contacts .user {
     margin-top: 12px;
+}
+
+/* ricorda di fare la scroll */
+
+
+/* central-part  */
+.central-part {
+    border-left: 2px solid #e4e4e4;
+    background-color: #f2eeea;
+}
+
+.account-part {
+    background-color: #eaeaea;
+}
+
+.account-part .icon {
+    line-height: 50px;
+    font-size: 18px;
+    color: #b1b1b1;
+}
+
+.account-part .icon:last-of-type {
+    margin-right: 12px;
+}
+
+/* message part  */
+.message-part {
+    height: calc(100% - 116px);
+    background: url(../img/mine.jpg);
+}
+
+
+/* input part  */
+.input-part {
+    font-size: 18px;
+    height: 50px;
+}
+.input-part input {
+    width: 100%;
 }
