@@ -19,13 +19,17 @@
     display: flex;
     justify-content: space-between;
 }
+.flex.align-center {
+    display: flex;
+    align-items: center;    
+}
 
-
-
+.h100 {
+    height: 100%;
+}
 
 /* end utility class  */
 body {
-    height: 100vh;
     background-image: linear-gradient(to bottom, #419388 15%, #dddbd2 15% , #d4dbdc);
     font-family: 'Roboto', sans-serif;
 }
@@ -33,11 +37,14 @@ body {
 .main-app {
     margin-top: 24px;
     margin-bottom: 24px;
-    height: calc(100% - 48px);
+    height: calc(100vh - 48px);
     background-color: #fafafa;
 }
 
 /* aside-part  */
+.aside-part {
+    background-color: #f7f7f7;
+}
 
 /* .user-part */
 .user-part {
@@ -55,8 +62,71 @@ body {
 }
 
 /* notification part  */
+.notification {
+    background-color: #9fd8f8;
+}
+
+.notification .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f4fbfe;
+    color: #9fd8f8;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.notification .title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.notification .active {
+    text-decoration: underline;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* serch part  */
+.serch {
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.serch .serch-icon {
+    color: #757575;
+}
+
+.serch input {
+    width: calc(100% - 12px);
+    border: none
+}
+
+.serch input::placeholder {
+    color: #757575;
+}
+
+.serch input:active {
+    border: none;
+}
 
 
 
 
 /* contacts part  */
+.contacts-parte {
+    height: calc(100% - 190px);
+}
+
+.contacts {
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.contacts .user {
+    margin-top: 12px;
+}

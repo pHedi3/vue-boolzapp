@@ -14,13 +14,11 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
 </head>
 
 <body>
-
-    <div class="container main-app">
-        <div class="row">
+    <div id="app" class="container main-app">
+        <div class="row h100">
             <div class="col-4 aside-part">
                 <div class="row user-part p-2 justify-content-between">
                     <div class="col p-0">
@@ -33,12 +31,41 @@
                         <div class="icon"><i class="fas fa-ellipsis-v"></i></div>
                     </div>
                 </div>
-                <div class="row">
-
+                <div class="row notification p-2">
+                    <div class="col p-0 flex align-center">
+                        <div class="button">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        <div>
+                            <div class="title">Ricevi notifiche di nuovi messaggi</div>
+                            <div class="active">Attiva notifiche deckstop</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row serch-parte p-2">
+                    <div class="col p-0 serch">
+                        <div class="row align-items-center">
+                            <div class="col-2 text-center serch-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="col">
+                                <input placeholder="Cerca o inizia una nuova chat" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row contacts-parte p-2">
+                    <div class="col p-0 contacts">
+                        <div v-for="(user, index) in contacts" class="user">
+                            <img :src="createTree(user.avatar)" alt="">
+                            <span>{{user.name}}</span>
+                        </div>
+                    </div>
                 </div>
 
-
             </div>
+
+
             <div class="col-8">
 
             </div>
@@ -46,12 +73,6 @@
         </div>
     </div>
 
-    <!-- <div id="app">
-        <div v-for="(user, index) in contacts" class="contacts">
-            <img :src="createTree(user.avatar)" alt=""> 
-            <span>{{user.name}}</span>
-        </div>
-    </div> -->
 
 
 
