@@ -52,6 +52,7 @@ body {
 /* aside-part  */
 .aside-part {
     background-color: #f7f7f7;
+    height: 100%;
 }
 
 /* .user-part */
@@ -127,6 +128,7 @@ body {
 /* contacts part  */
 .contacts-parte {
     height: calc(100% - 190px);
+    overflow-y: auto;
 }
 
 .contacts {
@@ -145,8 +147,10 @@ body {
 .central-part {
     border-left: 2px solid #e4e4e4;
     background-color: #f2eeea;
+    height: 100%;
 }
 
+/* account-part  */
 .account-part {
     background-color: #eaeaea;
 }
@@ -165,6 +169,7 @@ body {
 .message-part {
     height: calc(100% - 116px);
     background: url(../img/mine.jpg);
+    overflow-y: auto;
 }
 .message-part .utent-message {
     padding: 12px;
