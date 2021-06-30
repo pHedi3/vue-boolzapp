@@ -88,5 +88,10 @@ var app = new Vue({
             },
         ]
 
+    },
+    methods: {
+        createTree: function (code) {
+            return './img/avatar' + code + '.jpg'
+        }
     }
-}
+})
