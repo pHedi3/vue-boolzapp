@@ -1,3 +1,27 @@
+/* utility  class  */
+
+
+
+
+
+/* end utility class  */
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #419388 15%, #dddbd2 15% , #d4dbdc);
+}
+
+.main-app {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    height: calc(100% - 48px);
+    background-color: #fafafa;
+}
+
+
+
+
+
+/* contacts part  */
 .contacts img {
     width: 50px;
     border-radius: 50%;
