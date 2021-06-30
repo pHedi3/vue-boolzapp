@@ -1,4 +1,7 @@
+Vue.config.devtools = true;
+
 var app = new Vue({
+
     el: '#app',
     data: {
         contacts: [
@@ -86,12 +89,17 @@ var app = new Vue({
                     }
                 ],
             },
-        ]
+        ],
+        newMessage: '',
 
+
+    },
+    mounted() {
     },
     methods: {
         createTree: function (code) {
             return './img/avatar' + code + '.jpg'
         }
+
     }
 })
