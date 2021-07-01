@@ -195,6 +195,26 @@ body {
     margin-bottom: 8px;
 }
 
+.message-part .utent-message .icon-message {
+    color: #95a486;
+}
+
+.message-part .account-message .icon-message {
+    color: #b1b1b1;
+}
+.message-part .icon-message {
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-message .option-message {
+    color: #b1b1b1 ;
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    padding: 8px;
+    transform: translate(-100%);
+}
 
 
 

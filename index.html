@@ -82,8 +82,23 @@
                 <div class="row message-part p-2">
                     <div class="col p-0">
                         <div class="row m-2">
-                            <div v-for="mes in contacts[curIndex].messages" :class="filterMessage(mes.status)">
-                                {{mes.text}}
+                            <div v-for="(mes, index) in contacts[curIndex].messages" :class="filterMessage(mes.status)">
+                                <div class="row">
+                                    <div class="col-11">
+                                        {{mes.text}}
+                                    </div>
+                                    <div class="col-1 icon-message" @click="showElement(index)">
+                                        <i class="fas fa-chevron-down"></i>
+                                        <div v-if="showOptMes && curOptMes == index" class="option-message">
+                                            <div>Message info</div>
+                                            <div @click="delateMes(contacts[curIndex].messages, index)">Delate message
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 time">
+                                        {{mes.date}}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -106,14 +121,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
 
         <script src="./js/script.js"></script>
 </body>

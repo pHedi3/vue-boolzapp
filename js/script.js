@@ -95,7 +95,9 @@ var app = new Vue({
         nameSerch: '',
         nameSerchArray: null,
         nameSerchOk: '',
-        nameAnalized: ''
+        nameAnalized: '',
+        showOptMes: false,
+        curOptMes: null
 
 
     },
@@ -119,7 +121,7 @@ var app = new Vue({
                 text: this.newMessage,
                 status: 'sent'
             })
-            newMessage = ''
+            this.newMessage = ''
             this.reciveMessage(where)
 
         },
@@ -146,6 +148,14 @@ var app = new Vue({
                     }
                 }
             })
+        },
+        showElement: function (index) {
+            this.showOptMes = !this.showOptMes
+            this.curOptMes = index
+            //problema cilc su altra opzione devo fare il doppio click
+        },
+        delateMes: function (arrey, index) {
+            arrey.splice(index, 1)
         }
     }
 
