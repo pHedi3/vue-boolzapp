@@ -57,7 +57,7 @@
                 </div>
                 <div class="row contacts-parte p-2">
                     <div class="col p-0 contacts">
-                        <div v-for="(user, index) in nameSerchArray" class="user" @click="curIndex = index">
+                        <div v-for="(user, index) in nameSerchArray" class="user hover" @click="curIndex = index">
                             <img :src="createTree(user.avatar)" alt="">
                             <span>{{user.name}}</span>
                         </div>
@@ -90,8 +90,9 @@
                                     <div class="col-1 icon-message" @click="showElement(index)">
                                         <i class="fas fa-chevron-down"></i>
                                         <div v-if="showOptMes && curOptMes == index" class="option-message">
-                                            <div>Message info</div>
-                                            <div @click="delateMes(contacts[curIndex].messages, index)">Delate message
+                                            <div class="hover">Message info</div>
+                                            <div @click="delateMes(contacts[curIndex].messages, index)" class="hover">
+                                                Delate message
                                             </div>
                                         </div>
                                     </div>
