@@ -94,7 +94,8 @@ var app = new Vue({
         curIndex: 0,
         nameSerch: '',
         nameSerchArray: null,
-        nameSerchOk: ''
+        nameSerchOk: '',
+        nameAnalized: ''
 
 
     },
@@ -139,19 +140,16 @@ var app = new Vue({
                 if (text == '') {
                     return true
                 } else {
-                    this.nameSerchOk = this.corectInputName(text)
-                    if (element.name.includes(this.nameSerchOk)) {
+                    this.nameSerchOk = this.nameSerch.toLowerCase()
+                    this.nameAnalized = element.name.toLowerCase()
+                    if (this.nameAnalized.includes(this.nameSerchOk)) {
                         return true
                     } else {
                         return false
                     }
                 }
             })
-        },
-        corectInputName: function (text) {
-            return text[0].toUpperCase() + text.slice(1).toLowerCase()
         }
-
     }
 
 })
