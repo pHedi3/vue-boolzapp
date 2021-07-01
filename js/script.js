@@ -100,15 +100,31 @@ var app = new Vue({
         createTree: function (code) {
             return './img/avatar' + code + '.jpg'
         },
-        takeIndex: function (index) {
-            this.curIndex = index
-        },
         filterMessage: function (status) {
             if (status == 'sent') {
                 return 'col-7 offset-5 utent-message'
             } else if (status == 'received') {
                 return 'col-7 account-message'
             }
+        },
+        sentNewMessage: function (where) {
+            where.push({
+                data: '10/06/2021 17:16:34',
+                text: this.newMessage,
+                status: 'sent'
+            })
+            newMessage = ''
+            this.reciveMessage(where)
+
+        },
+        reciveMessage: function (where) {
+            setTimeout(() => {
+                where.push({
+                    data: '10/06/2021 17:16:36',
+                    text: 'ok',
+                    status: 'received'
+                })
+            }, 1000);
         }
 
     }

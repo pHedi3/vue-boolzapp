@@ -94,7 +94,8 @@
                                 <i class="far fa-smile"></i>
                             </div>
                             <div class="col p-0 text-center">
-                                <input v-model="newMessage" placeholder="Scrivi un messaggio" type="text">
+                                <input v-model="newMessage" placeholder="Scrivi un messaggio" type="text"
+                                    @keyup.enter="sentNewMessage(contacts[curIndex].messages)">
                             </div>
                             <div class="col-1 p-0 text-center">
                                 <i class="fas fa-microphone"></i>
