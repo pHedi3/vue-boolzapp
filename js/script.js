@@ -93,7 +93,8 @@ var app = new Vue({
         newMessage: '',
         curIndex: 0,
         nameSerch: '',
-        nameSerchArray: null
+        nameSerchArray: null,
+        nameSerchOk: ''
 
 
     },
@@ -135,12 +136,20 @@ var app = new Vue({
         },
         filterName: function (array, text) {
             this.nameSerchArray = array.filter((element) => {
-                if (element.name.includes(text) || text == '') {
+                if (text == '') {
                     return true
                 } else {
-                    return false
+                    this.nameSerchOk = this.corectInputName(text)
+                    if (element.name.includes(this.nameSerchOk)) {
+                        return true
+                    } else {
+                        return false
+                    }
                 }
             })
+        },
+        corectInputName: function (text) {
+            return text[0].toUpperCase() + text.slice(1).toLowerCase()
         }
 
     }
