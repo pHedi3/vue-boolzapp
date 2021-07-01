@@ -100,10 +100,7 @@ var app = new Vue({
 
     },
     mounted() {
-        setInterval(() => {
-            this.filterName(this.contacts, this.nameSerch)
-        }, 10);
-
+        this.filterName(this.contacts, this.nameSerch)
     },
     methods: {
         createTree: function (code) {
