@@ -56,7 +56,7 @@
                 </div>
                 <div class="row contacts-parte p-2">
                     <div class="col p-0 contacts">
-                        <div v-for="(user, index) in nameSerchArray " class="user" @click="curIndex = index">
+                        <div v-for="(user, index) in nameSerchArray" class="user" @click="curIndex = index">
                             <img :src="createTree(user.avatar)" alt="">
                             <span>{{user.name}}</span>
                         </div>

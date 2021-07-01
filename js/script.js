@@ -98,8 +98,10 @@ var app = new Vue({
 
     },
     mounted() {
-        this.filterName(this.contacts, this.nameSerch)
-        console.log(this.nameSerchArray)
+        setInterval(() => {
+            this.filterName(this.contacts, this.nameSerch)
+        }, 10);
+
     },
     methods: {
         createTree: function (code) {
