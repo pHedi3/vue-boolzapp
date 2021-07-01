@@ -91,7 +91,7 @@ var app = new Vue({
             },
         ],
         newMessage: '',
-
+        curIndex: 0
 
     },
     mounted() {
@@ -99,7 +99,18 @@ var app = new Vue({
     methods: {
         createTree: function (code) {
             return './img/avatar' + code + '.jpg'
+        },
+        takeIndex: function (index) {
+            this.curIndex = index
+        },
+        filterMessage: function (status) {
+            if (status == 'sent') {
+                return 'col-7 offset-5 utent-message'
+            } else if (status == 'received') {
+                return 'col-7 account-message'
+            }
         }
 
     }
+
 })

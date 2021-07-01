@@ -74,6 +74,10 @@ body {
     margin-right: 12px;
 }
 
+.user {
+    cursor: pointer;
+}
+
 /* notification part  */
 .notification {
     background-color: #9fd8f8;
