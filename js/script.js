@@ -98,6 +98,8 @@ var app = new Vue({
 
     },
     mounted() {
+        this.filterName(this.contacts, this.nameSerch)
+        console.log(this.nameSerchArray)
     },
     methods: {
         createTree: function (code) {
@@ -130,8 +132,8 @@ var app = new Vue({
             }, 1000);
         },
         filterName: function (array, text) {
-            let this.nameSerchArray = array.filter(() => {
-                if (array.name.includes(text) || text == '') {
+            this.nameSerchArray = array.filter((element) => {
+                if (element.name.includes(text) || text == '') {
                     return true
                 } else {
                     return false
