@@ -91,7 +91,10 @@ var app = new Vue({
             },
         ],
         newMessage: '',
-        curIndex: 0
+        curIndex: 0,
+        nameSerch: '',
+        nameSerchArray: null
+
 
     },
     mounted() {
@@ -125,6 +128,15 @@ var app = new Vue({
                     status: 'received'
                 })
             }, 1000);
+        },
+        filterName: function (array, text) {
+            let this.nameSerchArray = array.filter(() => {
+                if (array.name.includes(text) || text == '') {
+                    return true
+                } else {
+                    return false
+                }
+            })
         }
 
     }

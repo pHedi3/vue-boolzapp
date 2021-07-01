@@ -49,14 +49,14 @@
                                 <i class="fas fa-search"></i>
                             </div>
                             <div class="col">
-                                <input placeholder="Cerca o inizia una nuova chat" type="text">
+                                <input placeholder="Cerca o inizia una nuova chat" type="text" v-model="nameSerch">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row contacts-parte p-2">
                     <div class="col p-0 contacts">
-                        <div v-for="(user, index) in contacts" class="user" @click="curIndex = index">
+                        <div v-for="(user, index) in nameSerchArray " class="user" @click="curIndex = index">
                             <img :src="createTree(user.avatar)" alt="">
                             <span>{{user.name}}</span>
                         </div>
