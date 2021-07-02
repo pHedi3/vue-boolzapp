@@ -115,9 +115,13 @@ var app = new Vue({
                 return 'col-7 account-message'
             }
         },
+        getTimeNow: function () {
+            const now = dayjs()
+            return now.format('DD/MM/YYYY HH:mm:ss')
+        },
         sentNewMessage: function (where) {
             where.push({
-                data: '10/06/2021 17:16:34',
+                date: this.getTimeNow(),
                 text: this.newMessage,
                 status: 'sent'
             })
@@ -128,7 +132,7 @@ var app = new Vue({
         reciveMessage: function (where) {
             setTimeout(() => {
                 where.push({
-                    data: '10/06/2021 17:16:36',
+                    date: this.getTimeNow(),
                     text: 'ok',
                     status: 'received'
                 })

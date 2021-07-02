@@ -1,11 +1,11 @@
 /* utility  class  */
-.contacts img, .user-part img, .account-part img {
+.user-part img, .account-part img {
     width: 50px;
     border-radius: 50%;
     vertical-align: middle;
 }
 
-.contacts span, .user-part span, .account-part span {
+.user-part span, .account-part span {
     vertical-align: middle;
     line-height: 50px;
     font-size: 18px;
@@ -78,9 +78,6 @@ body {
     margin-right: 12px;
 }
 
-.user {
-    cursor: pointer;
-}
 
 /* notification part  */
 .notification {
@@ -148,8 +145,20 @@ body {
     border-radius: 12px;
 }
 
-.contacts .user {
+.contacts .account {
     margin-top: 12px;
+    cursor: pointer;
+    display: flex;
+    font-size: 10px;
+}
+
+.contacts img {
+    width: 100%;
+}
+
+.contacts .name {
+    font-size: 18px;
+    font-weight: 700;
 }
 
 /* ricorda di fare la scroll */
