@@ -126,6 +126,7 @@ var app = new Vue({
                 status: 'sent'
             })
             this.newMessage = ''
+            this.scrollLast()
             this.reciveMessage(where)
 
         },
@@ -137,6 +138,8 @@ var app = new Vue({
                     status: 'received'
                 })
             }, 1000);
+            this.scrollLast()
+
         },
         filterName: function (array, text) {
             this.nameSerchArray = array.filter((element) => {
@@ -168,6 +171,18 @@ var app = new Vue({
                 return text.slice(0, 18) + '...'
             }
 
+        },
+        lastMes: function (array, index) {
+            if (index == array.length - 1) {
+                return 'last'
+            } else {
+                return ''
+            }
+        },
+        scrollLast: function () {
+            setInterval(() => {
+                document.getElementsByClassName('last')[0].scrollIntoView(false)
+            }, 100);
         }
     }
 
