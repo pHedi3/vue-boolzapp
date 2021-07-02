@@ -65,7 +65,7 @@
                             </div>
                             <div class=" col-9 name-part">
                                 <div class="name">{{user.name}}</div>
-                                <div>{{user.messages[user.messages.length - 1].text}}
+                                <div>{{reduceLength(user.messages[user.messages.length - 1].text)}}
                                     {{user.messages[user.messages.length - 1]. date}}</div>
                             </div>
                         </div>

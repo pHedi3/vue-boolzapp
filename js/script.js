@@ -160,6 +160,14 @@ var app = new Vue({
         },
         delateMes: function (arrey, index) {
             arrey.splice(index, 1)
+        },
+        reduceLength: function (text) {
+            if (text.length < 18) {
+                return text
+            } else {
+                return text.slice(0, 18) + '...'
+            }
+
         }
     }
 

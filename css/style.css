@@ -138,6 +138,7 @@ body {
 .contacts-parte {
     height: calc(100% - 190px);
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .contacts {
@@ -146,14 +147,16 @@ body {
 }
 
 .contacts .account {
-    margin-top: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     cursor: pointer;
     display: flex;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .contacts img {
     width: 100%;
+    border-radius: 50%;
 }
 
 .contacts .name {
