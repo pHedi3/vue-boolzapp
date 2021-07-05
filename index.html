@@ -90,8 +90,8 @@
                 <div class="row message-part p-2">
                     <div class="col p-0">
                         <div class="row m-2">
-                            <div v-for="(mes, index) in contacts[curIndex].messages"
-                                :class="filterMessage(mes.status) + ' ' + lastMes(contacts[curIndex].messages, index )">
+                            <div v-for="(mes, index) in contacts[curIndex].messages" :class="filterMessage(mes.status)"
+                                class="message">
                                 <div class="row">
                                     <div class="col-11">
                                         {{mes.text}}

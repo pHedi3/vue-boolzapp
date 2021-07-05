@@ -97,7 +97,8 @@ var app = new Vue({
         nameSerchOk: '',
         nameAnalized: '',
         showOptMes: false,
-        curOptMes: null
+        curOptMes: null,
+
 
 
     },
@@ -137,8 +138,8 @@ var app = new Vue({
                     text: 'ok',
                     status: 'received'
                 })
+                this.scrollLast()
             }, 1000);
-            this.scrollLast()
 
         },
         filterName: function (array, text) {
@@ -172,16 +173,9 @@ var app = new Vue({
             }
 
         },
-        lastMes: function (array, index) {
-            if (index == array.length - 1) {
-                return 'last'
-            } else {
-                return ''
-            }
-        },
         scrollLast: function () {
-            setInterval(() => {
-                document.getElementsByClassName('last')[0].scrollIntoView(false)
+            setTimeout(() => {
+                document.querySelector('.message:last-child').scrollIntoView(false)
             }, 100);
         }
     }
